@@ -9,15 +9,15 @@ jobs:
       - name: 1. Verify Runner IP
         run: curl -s https://ipinfo.io/json
 
-      - name: 2. Test Claude Opus 4.6 Thinking
+      - name: 2. Test Claude Opus 4.6
         env:
           API_KEY: ${{ secrets.AGENTRITA_KEY }}
         run: |
-          curl -s -X POST https://agentrita.xyz/v1/chat/completions \
+          curl -s -X POST https://poloai.top/v1/chat/completions \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer $API_KEY" \
             -d '{
-              "model": "claude-opus-4-6-thinking",
+              "model": "claude-opus-4-6",
               "messages": [
                 {
                   "role": "user",
@@ -25,3 +25,4 @@ jobs:
                 }
               ]
             }' | jq .
+
