@@ -13,7 +13,7 @@ jobs:
         env:
           API_KEY: ${{ secrets.AGENTRITA_KEY }}
         run: |
-          curl -s -X POST https://api.bluesminds.com/v1/chat/completions \
+          curl -s -X POST https://viber.claudegateway.site/v1/chat/completions \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer $API_KEY" \
             -d '{
@@ -25,6 +25,7 @@ jobs:
                 }
               ]
             }' | jq .
+
 
 
 
