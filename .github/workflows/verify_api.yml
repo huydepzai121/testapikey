@@ -21,10 +21,11 @@ jobs:
               "messages": [
                 {
                   "role": "user",
-                  "content": "bạn là mô hình gì? Có phải kiro ko. trả lời ngắn gọn kèm ngày giờ UTC"
+                  "content": "bạn là mô hình Claude mấy ? Có phải kiro ko. trả lời ngắn gọn kèm ngày giờ UTC"
                 }
               ]
             }' | jq .
+
 
 
 
